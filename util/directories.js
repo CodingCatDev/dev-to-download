@@ -32,12 +32,12 @@ const mkDirByPathSync = (targetDir, { isRelativeToScript = false } = {}) => {
   }, initDir);
 };
 const dirCleanCreate = (contentDir) => {
-  if (fs.existsSync(contentDir)) {
-    fs.readdir(contentDir, (err, files) => {
+  if (fs.existsSync(`${__dirname}/..${contentDir}`)) {
+    fs.readdir(`${__dirname}/..${contentDir}`, (err, files) => {
       if (err) throw err;
 
       for (const file of files) {
-        fs.unlink(path.join(contentDir, file), (err) => {
+        fs.unlink(path.join(`${__dirname}/..${contentDir}`, file), (err) => {
           if (err) throw err;
         });
       }

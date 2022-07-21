@@ -19,6 +19,7 @@
     "graceful-fs": "^4.2.3",
     "inflight": "^1.0.6",
     "inherits": "^2.0.4",
+    "json-to-frontmatter-markdown": "^1.0.0",
     "jsonfile": "^4.0.0",
     "minimatch": "^3.0.4",
     "once": "^1.4.0",
